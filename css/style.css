@@ -1,0 +1,402 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+    background: #717171;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+html{
+    font-size: 10px ;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* Start header */
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 60px;
+    padding: 15px;
+}
+.left-section{
+    display:flex ;
+    align-items: center;
+    cursor: pointer;
+}
+
+.left-section img{
+    width: 50%;
+    padding-left: 15px;
+}
+
+.center-section{
+    display: flex;
+    align-items: center;
+    flex: 0 1 685px;
+    margin-left: 40px;
+    
+}
+
+.center-section form{
+    display: flex;
+    flex-grow: 1;
+    
+    min-width: 18rem;
+}
+
+.center-section form input{
+    width: 100%;
+    border-radius: 2px 0 0 2px; 
+    padding: 13px;
+    font-size: 1.6rem;/* kol wa7ed rem = 10px */ 
+    border: 1px solid #d3d3d3;
+    border-right: none;
+}
+
+.center-section form button{
+    width: 65px;
+    border: 1px solid #d3d3d3;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    
+}
+
+.center-section .mic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #d3d3d3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+.right-section a{
+    padding-left: 15px;
+    color: black;
+}
+
+/* end header */
+
+
+.content-area{
+    height: calc(100vh - 65px ); /* 100 vh chacha kemla w 100vh-65px na7aw menha height of navbar ()65px */
+    display: flex;
+    position: fixed;
+    background-color: white;
+
+}
+
+/* start side sction */
+aside{
+    height: 100%;
+    width: 280px;
+    background-color: white;
+    overflow-y:scroll  ; /* idha mo7tawa ziada yatla3 charit*/
+    
+}
+
+nav{
+    width: 100%;
+    flex-direction: column;
+    margin:16px 0 ;
+    padding-right: 15px;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+}
+.nav-link:hover{
+   background-color: #eeebeb;
+}
+
+.active{
+    background-color: #eeebeb;
+}
+
+.nav-link span{
+    margin-left: 27px;
+    font-size: 16px;
+    font-weight: 400;
+}
+hr{
+    margin: 10px 0;
+    height: 2px;
+    background-color: rgba(246, 243, 243, 0.571);
+    border: none;
+}
+
+.subscriptions{
+    font-size: 18px;
+    color: #606060;
+    padding: 10px ;
+    padding-left: 15px;
+}
+
+.image_channel{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+}
+
+.Links1 {
+    
+    padding: 16px 24px 0 ;
+    
+}
+.Links1 a{
+    
+    display: inline-block;
+    text-decoration: none;
+    color:#606060;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.8rem;
+    margin-right: 8px;
+    
+}
+
+.Links2 {
+    
+    padding: 12px 24px 0 ;
+    
+}
+.Links2 a{
+    
+    display: inline-block;
+    text-decoration: none;
+    color:#606060;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.8rem;
+    margin-right: 8px;
+    
+}
+
+.copyright{
+    font-size: 12px;
+    padding: 16px 24px;
+    color:#909090;
+}
+
+/* end side sction */
+
+.content {
+    width: calc(100vw - 280px);
+}
+
+.chips-wrapper {
+    overflow-x: scroll;
+    background-color: white;
+    display:flex ;
+    padding-left: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chips-wrapper::-webkit-scrollbar {
+    height: 0;
+}
+
+.chip {
+    height: 32px;
+    width: auto;
+    margin: 12px 6px;
+    font-size: 14px;
+    align-items: center;
+    background-color: #0000000D;
+    padding: 6px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #0f0f0f;
+    transition: .5s;
+}
+
+.chip:hover {
+    background-color: #eeebeb;
+}
+
+
+/* video container startrs here  */
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 18px;
+    padding: 20px 25px;
+    background-color: white;
+    overflow-y: scroll;
+    height: calc(100vh - 116px);
+}
+
+.video-content-cover {
+    position: relative;
+    transition: .5s;
+    transition-delay: .05s;
+}
+
+.video-content {
+    margin-bottom: 25px;
+    position: relative;
+    transition: .5s;
+    width: 100%;
+}
+
+.video-content:hover {
+    transform: scale(1.5);
+    z-index: 222;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 white;
+    background-color: white;
+}
+
+.video-content-cover:hover {
+    transform: translateY(60px);
+    z-index: 999;
+}
+
+.video-content-cover:nth-child(4n+1):hover {
+    transform: translate(50px, 60px);
+    z-index: 999;
+}
+
+.video-content-cover:nth-child(4n+4):hover {
+    transform: translate(-30px, 60px);
+    z-index: 999;
+}
+
+.video-content:hover .video-details {
+    background-color: white;
+    padding: 10px;
+}
+
+.video-box {
+    position: relative;
+    width: auto;
+    height: 145px;
+    display: block;
+}
+
+.video-details {
+    display: flex;
+    color: black;
+    padding-top: 12px;
+}
+
+.video-content:hover .channel-logo {
+    width: 36px;
+    height: 36px;
+}
+
+.channel-logo {
+    margin-top: 40px;
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+   
+    
+}
+.channel-logo img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.detail {
+    margin-top: 40px;
+    margin-left: 12px;
+}
+
+.video-content:hover .title {
+    font-size: 14px;
+}
+
+.title {
+    font-size: 14px;
+}
+
+.video-content:hover .channel-name {
+    font-size: 12px;
+}
+
+.channel-name {
+    font-size: 12px;
+    margin-top: 20px;
+    color: #aaa;
+}
+
+.video-content:hover .views-upload {
+    font-size: 12px;
+}
+
+.views-upload {
+    display: flex;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.btn {
+    padding: 5px 0;
+    color: black;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: #efefef;
+    text-align: center;
+    margin: 5px 0;
+    font-size: .6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn i {
+    font-size: 14px;
+    margin-right: 5px;
+    color: black;
+}
+
+.hidden-content {
+    display: none;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.video-content:hover .hidden-content {
+    display: block;
+}
